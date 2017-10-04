@@ -1058,6 +1058,9 @@ iframe {
         .sidebar-widget .dropdown-menu {
             display: none !important;
         }
+		.mailinglist-submit {
+			padding: 7px 12px;
+		}
     }
     .sidebar-widget .product-item .img {
         min-height: 80px;
