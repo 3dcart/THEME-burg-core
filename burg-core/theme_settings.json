@@ -188,7 +188,7 @@
         },
         {
             "page": "Home Page",
-            "hide_left": true,
+            "hide_left": false,
             "hide_right": true,
             "hide_framemenu": false
         },

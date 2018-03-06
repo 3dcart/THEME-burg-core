@@ -1082,3 +1082,11 @@ iframe {
         border: none;
     }
 
+
+.noleftbar #leftBar {
+    display: none;
+}
+.noleftbar .cat-items-grid {
+    float: none;
+    width: 100%;
+}
