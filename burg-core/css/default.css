@@ -1058,6 +1058,9 @@ iframe {
         .sidebar-widget .dropdown-menu {
             display: none !important;
         }
+		.mailinglist-submit {
+			padding: 7px 12px;
+		}
     }
     .sidebar-widget .product-item .img {
         min-height: 80px;
@@ -1082,11 +1085,15 @@ iframe {
         border: none;
     }
 
-
 .noleftbar #leftBar {
-    display: none;
+	display: none;
 }
 .noleftbar .cat-items-grid {
-    float: none;
-    width: 100%;
+	float: none;
+	width: 100%;
+}
+@media(min-width: 768px) {
+    .revealOnScroll {
+        opacity:0;
+    }
 }
