@@ -570,7 +570,7 @@ ul.social-icons li.social-icons-label {
     text-align: center;
 }
 @media (min-width: 1025px) {
-    .product-items .product-item {
+    div.product-items .product-item {
         opacity: 0;
     }
 }
