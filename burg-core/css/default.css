@@ -569,7 +569,7 @@ ul.social-icons li.social-icons-label {
 .product-items .product-item {
     text-align: center;
 }
-@media (min-width: 1025px) {
+@media (min-width: 1200px) {
     div.product-items .product-item {
         opacity: 0;
     }
