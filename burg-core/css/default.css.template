@@ -584,11 +584,11 @@ ul.social-icons li.social-icons-label {
 .product-items .product-item {
     text-align: center;
 }
-@media (min-width: 1025px) {
+/*@media (min-width: 1025px) {
     div.product-items .product-item {
         opacity: 0;
     }
-}
+}*/
 .product-item .name a {
     color: #000;
     font-weight: 700;
