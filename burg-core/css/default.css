@@ -1055,7 +1055,7 @@ iframe {
             .sidebar-widget ul li:hover > a{
                 background-color: #eee;
             }
-            .sidebar-widget ul#categories > li:hover > a:after{
+            .sidebar-widget ul#categories > li.dropdown:hover > a:after{
                 content: "\f105";
                 -webkit-transition: all 500ms ease;
                 -moz-transition: all 500ms ease;
