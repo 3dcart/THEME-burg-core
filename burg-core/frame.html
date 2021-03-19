@@ -3,8 +3,8 @@
 <head>
     <meta charset="utf-8">
     <meta http-equiv="x-ua-compatible" content="ie=edge">
-    <title>[TITLE]</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0">
+    <title>[TITLE]</title>    
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2, user-scalable=yes">
     [META]
 
     <!--START: FRAME_RSSFEEDS -->
@@ -25,7 +25,7 @@
 
 </head>
 <body class="[body_class]" data-currency="[currency_symbol]" data-decimal="[decimal_places]">
-
+    <div id="skip"><a href="#main">Skip to Main Content</a></div>
     <section class="full-header">
 
         <header class="site-header">
@@ -33,17 +33,17 @@
                 <div class="row">
                     <div class="col-xs-3 visible-xs text-left head-mobile-nav">
                         <a href="#" id="mobile-menu-trigger">
-                            <span class="icon-menu"></span>
+                            <span class="icon-menu" role="presentation"></span>
                         </a>
                     </div>
 
                     <div class="col-sm-3 hidden-xs">
                         <!--START: FRAME_SEARCH-->
                         <div id="searchBox" class="searchBox">
-                            <form method="get" name="searchForm" action="search.asp">
+                            <form method="get" name="searchForm" action="search.asp" role="search">
                                 <div class="search-form">
-                                    <input type="text" id="searchlight" name="keyword" value="" placeholder="[frame_search]" class="search-text form-control" />
-                                    <button type="submit" class="search-submit btn btn-default btn-inverse"><span class="icon-search"></span></button>
+                                    <input type="text" id="searchlight" name="keyword" value="" placeholder="[frame_search]" class="search-text form-control" aria-label="search input" />
+                                    <button type="submit" class="search-submit btn btn-default btn-inverse" aria-label="search button"><span class="icon-search" role="presentation"></span></button>
                                 </div>
                             </form>
                             <div class="clear"></div>
@@ -63,32 +63,32 @@
                     <div class="col-md-4 col-sm-4 hidden-xs">
                         <div class="useraccount clearfix">
                             <ul class="clearfix">
-                                <li><a href="/view_cart.asp"><span class="icon-basket"></span> [frame_ITEMSINCART-text] ([ITEMSINCART])</a></li>
+                                <li><a href="/view_cart.asp"><span class="icon-basket" role="presentation"></span> [frame_ITEMSINCART-text] ([ITEMSINCART])</a></li>
                                 <li>|</li>
                                 <!--START: username-->
-                                <li><a href="/myaccount.asp"><span class="icon-user"></span> [frame_myaccount-link-text] / Hi [username]</a></li>
+                                <li><a href="/myaccount.asp"><span class="icon-user" role="presentation"></span> [frame_myaccount-link-text] / Hi [username]</a></li>
                                 <!--END: username-->
                                 <!--START: login-->
-                                <li><a href="/myaccount.asp"><span class="icon-user"></span> [frame_myaccount-link-text]  / Hi Guest</a></li>
+                                <li><a href="/myaccount.asp"><span class="icon-user" role="presentation"></span> [frame_myaccount-link-text]  / Hi Guest</a></li>
                                 <!--END: login-->
-                                <li><a href="#" id="mobile-menu-trigger2" class="visible-sm"><span class="icon-menu"></span></a></li>
+                                <li><a href="#" id="mobile-menu-trigger2" class="visible-sm"><span class="icon-menu" role="presentation"></span></a></li>
                             </ul>
                         </div>
                     </div>
 
                     <div class="col-xs-3 text-right visible-xs head-mobile-nav">
                         <a class="hidden" href="/view_cart.asp">
-                            <span class="icon-basket"></span>
+                            <span class="icon-basket" role="presentation"></span>
                         </a>
-                        <a href="#" data-toggle="modal" data-target="#searchModal"><span class="icon-search"></span></a>
+                        <a href="#" data-toggle="modal" data-target="#searchModal"><span class="icon-search" role="presentation"></span></a>
                     </div>
 
                     <!--START: shopping_cart-->
                     <div id="floating-cart" class="floating-cart">
                         <a href="view_cart.asp" class="minicart-inner clearfix">
-                            <span class="icon-basket cart-icon"></span>
+                            <span class="icon-basket cart-icon" role="presentation"></span>
                             <span class="cart-details">
-                                <span class="minicart-items">[ITEMSINCART]</span> [frame_ITEMSINCART-text]
+                                <span class="minicart-items" role="presentation">[ITEMSINCART]</span> [frame_ITEMSINCART-text]
                             </span>
                         </a>
                     </div>
@@ -117,7 +117,7 @@
 
     </section>
 
-    <div class="container full-content">
+    <main id="main" class="container full-content">
 
         <div class="row">
 
@@ -134,7 +134,7 @@
             </div>
 
         </div>
-    </div>
+    </main>
 
     <!--START: global_footer-->
     <section class="global-footer">
@@ -152,9 +152,9 @@
                             <!--START: FRAME_MAILLIST-->
                             <div class="mailist-box ajax-mailinglist" data-callfront="mailinglist_callfront" data-callback="mailinglist_response">
                                 <form method="post" name="mailing" action="mailing_list_ajax.asp">
-                                    <h3>[frame_mailinglist]</h3>
+                                    <h2>[frame_mailinglist]</h2>
                                     <div class="mailinglist-form clearfix">
-                                        <input class="mailinglist-input form-control" type="text" name="email" placeholder="Email Address" autocomplete="off" />
+                                        <input class="mailinglist-input form-control" type="text" name="email" placeholder="Email Address" autocomplete="off" aria-required="true" aria-label="email address" aria-invalid="true"  />
                                         <button class="mailinglist-submit btn btn-default" type="submit" name="www">
                                             <span id="mailing-btn-txt">[mailinglist_button]</span>
                                             <span id="mailing-btn-load" class="mailing-btn-load icon-spin2 animate-spin hidden"></span>
@@ -178,29 +178,61 @@
                             <!--START: social_icons-->
                             <ul class="social-icons list-unstyled list-inline">
                                 <!--START: social_link_facebook-->
-                                <li><a href="[social_link_facebook_url]" class="facebook" target="_blank" title="Like Us on Facebook"><span class="icon-facebook"></span></a></li>
-                                <!--END: social_link_facebook-->
-                                <!--START: social_link_twitter-->
-                                <li><a href="[social_link_twitter_url]" class="twitter" target="_blank" title="Follow Us on Twitter"><span class="icon-twitter"></span></a></li>
-                                <!--END: social_link_twitter-->
-                                <!--START: social_link_googleplus-->
-                                <li><a href="[social_link_googleplus_url]" class="gplus" target="_blank" title="Follow Us on Google+"><span class="icon-gplus"></span></a></li>
-                                <!--END: social_link_googleplus-->
-                                <!--START: social_link_youTube-->
-                                <li><a href="[social_link_youTube_url]" class="youtube" target="_blank" title="Subscribe to our Channel"><span class="icon-youtube"></span></a></li>
-                                <!--END: social_link_youTube-->
-                                <!--START: social_link_pinterest-->
-                                <li><a href="[social_link_pinterest_url]" class="pinterest" target="_blank" title="Follow Us on Pinterest"><span class="icon-pinterest"></span></a></li>
-                                <!--END: social_link_pinterest-->
-                                <!--START: social_link_instagram-->
-                                <li><a href="[social_link_instagram_url]" class="instagram" target="_blank" title="Follow Us on Instagram"><span class="icon-instagram"></span></a></li>
-                                <!--END: social_link_instagram-->
-                                <!--START: social_link_tumblr-->
-                                <li><a href="[social_link_tumblr_url]" class="tumblr" target="_blank" title="Follow Us on Tumblr"><span class="icon-tumblr"></span></a></li>
-                                <!--END: social_link_tumblr-->
-                                <!--START: social_link_blog-->
-                                <li><a href="[social_link_blog_url]" class="blog" target="_blank" title="Subscribe to our Blog"><span class="icon-rss"></span></a></li>
-                                <!--END: social_link_blog-->
+                            <li>
+                                <a href="[social_link_facebook_url]" class="facebook" target="_blank" title="Like Us on Facebook" aria-label="Like Us on Facebook" role="button" rel="external noopener nofollow">
+                                    <span class="icon-facebook" role="presentation"></span>
+                                </a>
+                            </li>
+                            <!--END: social_link_facebook-->
+                            <!--START: social_link_twitter-->
+                            <li>
+                                <a href="[social_link_twitter_url]" class="twitter" target="_blank" title="Follow Us on Twitter" aria-label="Follow Us on Twitter" role="button" rel="external noopener nofollow">
+                                    <span class="icon-twitter" role="presentation"></span>
+                                </a>
+                            </li>
+                            <!--END: social_link_twitter-->
+                            <!--START: social_link_googleplus-->
+                            <li>
+                                <a href="[social_link_googleplus_url]" class="gplus" target="_blank" title="Follow Us on Google+" aria-label="Follow Us on Google+" role="button" rel="external noopener nofollow">
+                                    <span class="icon-gplus" role="presentation"></span>
+                                </a>
+                            </li>
+                            <!--END: social_link_googleplus-->
+                            <!--START: social_link_youTube-->
+                            <li>
+                                <a href="[social_link_youTube_url]" class="youtube" target="_blank" title="Subscribe to our Channel" aria-label="Subscribe to our Channel" role="button" rel="external noopener nofollow">
+                                    <span class="icon-youtube" role="presentation"></span>
+                                </a>
+                            </li>
+                            <!--END: social_link_youTube-->
+                            <!--START: social_link_pinterest-->
+                            <li>
+                                <a href="[social_link_pinterest_url]" class="pinterest" target="_blank" title="Follow Us on Pinterest" aria-label="Follow Us on Pinterest" role="button" rel="external noopener nofollow">
+                                    <span class="icon-pinterest" role="presentation"></span>
+                                </a>
+                            </li>
+                            <!--END: social_link_pinterest-->
+                            <!--START: social_link_instagram-->
+                            <li>
+                                <a href="[social_link_instagram_url]" class="instagram" target="_blank" title="Follow Us on Instagram" aria-label="Follow Us on Instagram" role="button" rel="external noopener nofollow">
+                                    <span class="icon-instagram" role="presentation"></span>
+                                </a>
+                            </li>
+                            <!--END: social_link_instagram-->
+                            <!--START: social_link_tumblr-->
+                            <li>
+                                <a href="[social_link_tumblr_url]" class="tumblr" target="_blank" title="Follow Us on Tumblr" aria-label="Follow Us on Tumblr" role="button" rel="external noopener nofollow">
+                                    <span class="icon-tumblr" role="presentation"></span>
+                                </a>
+                            </li>
+                            <!--END: social_link_tumblr-->
+                            <!--START: social_link_blog-->
+                            <li>
+                                <a href="[social_link_blog_url]" class="blog" target="_blank" title="Subscribe to our Blog" aria-label="Subscribe to our Blog" role="button" rel="external noopener nofollow">
+                                    <span class="icon-rss" role="presentation"></span>
+                                </a>
+                            </li>
+                            <!--END: social_link_blog-->
                             </ul>
                             <!--END: social_icons-->
                         </div>
@@ -272,10 +304,10 @@
                 </div>
                 <div class="modal-body">
                     <div id="searchBox2" class="searchBox">
-                        <form method="get" name="searchForm2" action="search.asp">
+                        <form method="get" name="searchForm2" action="search.asp" role="search">
                             <div class="search-form">
-                                <input type="text" id="searchlight2" name="keyword" value="" placeholder="[frame_search]" class="search-text form-control" />
-                                <button type="submit" class="search-submit btn btn-default btn-inverse"><span class="icon-search"></span></button>
+                                <input type="text" id="searchlight2" name="keyword" value="" placeholder="[frame_search]" class="search-text form-control" aria-label="search input"/>
+                                <button type="submit" class="search-submit btn btn-default btn-inverse" aria-label="search button"><span class="icon-search" role="presentation"></span></button>
                             </div>
                         </form>
                         <div class="clear"></div>

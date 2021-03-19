@@ -5,7 +5,21 @@
 html, body {
   /*height: 100%;*/
 }
-
+#skip a
+{
+position:absolute;
+left:-10000px;
+top:auto;
+width:1px;
+height:1px;
+overflow:hidden;
+}
+#skip a:focus
+{
+position:static;
+width:auto;
+height:auto;
+}
 .cat-items-grid {
   display: flex;
   height: 100%;
@@ -473,6 +487,7 @@ ul.extrapages li a {
     font-weight: 500;
     line-height:1.5em;
 }
+.copyright a{color: #000;}
 .copyright_txt {
     padding:10px 0;
 }
@@ -487,7 +502,7 @@ ul.extrapages li a {
     max-width: 320px;
     margin-bottom: 25px;
 }
-.mailist-box h3 {
+.mailist-box h3,.mailist-box h2 {
     margin: 0 0 8px;
 	font-family: 'Quicksand', sans-serif;
     font-size: 16px;
@@ -683,7 +698,7 @@ span.freeshipping {
     background-color: #fff;
     padding: 30px 0;
 }
-.products-section h2 {
+.products-section h2,.products-section h1 {
     text-align: left;
     font-size: 25px;
     line-height: 1.35;
@@ -693,7 +708,7 @@ span.freeshipping {
     margin: 0 0 25px;
     position: relative;
 }
-.products-section h2:after {
+.products-section h2:after,.products-section h1:after {
 }
 .home-page-content .category-footer {
     padding: 20px 0;
