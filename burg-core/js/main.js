@@ -101,10 +101,6 @@ function moveMenu() {
         jQuery('#categories').appendTo('#desk_categories');
     }
 
-    if (respWidth < 767) {
-    }
-    else {
-    }
 }
 
 jQuery(document).ready(function () {
