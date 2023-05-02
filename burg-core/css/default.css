@@ -26,6 +26,9 @@ height:auto;
   flex-direction: column;
 	min-height: 100vh;
 }
+.homeCarousel img.img-responsive {
+    width: 100%;
+}
 .page-content,.full-content {
   flex: 1 0 auto;
 }
