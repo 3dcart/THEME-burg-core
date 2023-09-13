@@ -35,7 +35,7 @@ height:auto;
 footer {
   flex-shrink: 0;
 }
-
+#mobSearch{display:none !important}
 .homepage-blog-posts .post-image-container img {
     height: 200px;
 }
