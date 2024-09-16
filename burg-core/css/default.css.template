@@ -1151,8 +1151,13 @@ iframe {
         border: none;
     }
 
-.noleftbar #leftBar {
+.noleftbar #leftBar, body.view-cart #leftBar, body.my-account #leftBar {
 	display: none;
+}
+body.view-cart .middle-grid, body.my-account .middle-grid, body.view-cart #midCol, body.my-account #midCol {
+	width: 100%;
+	max-width: 100%;
+	padding: 0;
 }
 .noleftbar .cat-items-grid {
 	float: none;
